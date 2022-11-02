@@ -1,25 +1,17 @@
-import cv2
+import imageio.v3 as iio
 
-# image로 분리할 파일 이름
-fileName = '''collection 5'''
-# 파일 위치
-cap = cv2.VideoCapture(f'videos/{fileName}.mp4')
+path = "videos/All New Popeye - The Ski's The Limit AND MORE (Episode 2).mp4"
+# read a single frame
+frame = iio.imread(
+    path,
+    index=42,
+    plugin="pyav",
+)
 
-width = cap.get(3)
-height = cap.get(4)
-fps = int(cap.get(cv2.CAP_PROP_FPS))
+# bulk read all frames
+# Warning: large videos will consume a lot of memory (RAM)
+frames = iio.imread(path, plugin="pyav")
 
-count = 0
-while True:
-    ret, fram = cap.read()
-
-    if ret:
-        if(int(cap.get(1)) % fps == 0): #앞서 불러온 fps 값을 사용하여 1초마다 추출
-            cv2.imwrite(f"videos/X/{fileName}_{count}.jpg", fram)
-            print('Saved frame number :', str(int(cap.get(1))))
-            # 몇 개마다 추출 할지
-            count += 3
-    else:
-        break
-
-cap.release()
+# iterate over large videos
+for frame in iio.imiter(path, plugin="pyav"):
+    print(frame.shape, frame.dtype)
