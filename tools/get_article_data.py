@@ -1,3 +1,5 @@
+import os.path
+
 import jsonlines
 import pandas as pd
 import re
@@ -25,6 +27,7 @@ def get_article_data(file_path):
     texts = []
     regex = re.compile('{}(.*){}'.format(re.escape('_'), re.escape('.')))
     file_name = regex.findall(file_path)[0]
+    file_directory = ARTICLE_FOLDER_PATH + '/{}'.format(file_name)
 
     with jsonlines.open(file_path) as f:
         for line in tqdm(f):
@@ -32,9 +35,15 @@ def get_article_data(file_path):
             texts.append(remove_emoji(line['text']))
 
     article_df = pd.DataFrame({'category': categories, 'text': texts})
-    article_df.to_csv(ARTICLE_FOLDER_PATH+'/{}/{}.csv'.format(file_name, file_name), index=False)
-    
-    
+
+    try:
+        if not os.path.exists(file_directory):
+            os.makedirs(file_directory)
+            article_df.to_csv(file_directory+'/{}.csv'.format(file_name, file_name), index=False)
+    except OSError:
+        print("Error: Failed to create the directory")
+
+
 def main():
     file_list = [TRAIN_ARTICLE_PATH, TEST_ARTICLE_PATH, VAL_ARTICLE_PATH]
     [get_article_data(file_path) for file_path in file_list]
