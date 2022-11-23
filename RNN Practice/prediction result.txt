@@ -1,0 +1,48 @@
+Model: "my_model"
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #   
+=================================================================
+ embedding (Embedding)       multiple                  23808     
+                                                                 
+ gru (GRU)                   multiple                  3938304   
+                                                                 
+ dense (Dense)               multiple                  95325     
+                                                                 
+=================================================================
+Total params: 4,057,437
+Trainable params: 4,057,437
+Non-trainable params: 0
+_________________________________________________________________
+
+Harry, Strigging, Lucius 
+had develed the impression that she would be able 
+dimidicing the new words on the deadening room where. 
+
+Ron passed the wardrobe behind them, her 
+mound was through a shame more slightly 
+examined the letter with Lucius Malfoy,’ Crabbe 
+together. ... 
+
+“So as we know — ?” Ron replied. He thought of 
+Riddle’s descent in the cellar, Ron had just 
+reached the Elder Wand. Then an unnatural 
+aged moment they had heard trying to listen all the 
+tried before the uses together. For a while, shielding 
+him or an uffect of really because they were hustening 
+snow; the golden gates in Azkaban because there 
+was no snow with our Ministry for Transfiguration 
+and treatments for convenient. ...” 
+
+“You can — ” 
+
+“He works belonging and saw you?” 
+
+Not Hermione still habited Hagrid’s hests. Would he gained 
+back to the sun spillings echoed upon a long 
+man tipped apart, which nobbed thick, she was 
+spewdling as his shortches disapproval of them 
+cuffs. “Expecto Ravenclaw to give 
+
+________________________________________________________________________________
+
+Run time: 2.749858856201172
