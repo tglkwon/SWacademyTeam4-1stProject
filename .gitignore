@@ -1,2 +1,5 @@
 /RNNs/.idea/
-/RNNs/training_checkpoints/
+/RNNs/training_checkpoints/*
+!/RNNs/training_checkpoints/ckpt_text_Generation.data-00000-of-00001
+!/RNNs/training_checkpoints/ckpt_text_Generation.index
+
