@@ -1,21 +1,19 @@
-import os.path
-
+import os
 import jsonlines
 import pandas as pd
 import re
 from dotenv import load_dotenv
-from os import getenv
 from tqdm import tqdm
 
 
-# load env
+# load .env file
 load_dotenv()
 # jsonl article file path
-TRAIN_ARTICLE_PATH = getenv('TRAIN_ARTICLE_PATH')
-TEST_ARTICLE_PATH = getenv('TEST_ARTICLE_PATH')
-VAL_ARTICLE_PATH = getenv('VAL_ARTICLE_PATH')
+TRAIN_ARTICLE_PATH = os.getenv('TRAIN_ARTICLE_PATH')
+TEST_ARTICLE_PATH = os.getenv('TEST_ARTICLE_PATH')
+VAL_ARTICLE_PATH = os.getenv('VAL_ARTICLE_PATH')
 # article folder path
-ARTICLE_FOLDER_PATH = getenv('ARTICLE_FOLDER_PATH')
+ARTICLE_FOLDER_PATH = os.getenv('ARTICLE_FOLDER_PATH')
 
 
 def remove_emoji(text):
