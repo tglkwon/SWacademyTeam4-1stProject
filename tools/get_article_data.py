@@ -33,11 +33,11 @@ def get_article_data(file_path):
             texts.append(remove_emoji(line['text']))
 
     article_df = pd.DataFrame({'category': categories, 'text': texts})
-
+    
     try:
         if not os.path.exists(file_directory):
-            os.makedirs(file_directory)
-            article_df.to_csv(file_directory+'/{}.csv'.format(file_name, file_name), index=False)
+            os.makedirs(file_directory)        
+        article_df.to_csv(file_directory+'/{}.csv'.format(file_name), index=False)
     except OSError:
         print("Error: Failed to create the directory")
 
