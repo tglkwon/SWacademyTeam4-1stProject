@@ -87,8 +87,7 @@ model = MyModel(
     vocab_size=vocab_size,
     embedding_dim=embedding_dim,
     rnn_units=rnn_units)
-
-model.summary
+    
 
 for input_example_batch, target_example_batch in dataset.take(1):
     example_batch_predictions = model(input_example_batch)
