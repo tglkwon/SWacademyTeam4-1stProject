@@ -3,3 +3,20 @@
 !/RNNs/training_checkpoints/ckpt_text_Generation.data-00000-of-00001
 !/RNNs/training_checkpoints/ckpt_text_Generation.index
 
+/.idea/
+__pycache__
+jsonWeb.jfif
+/Data collecting/config.py
+/Data collecting/news/*.txt
+/DataPipeline/incheon_yeonsugu_covid.csv
+/DataPipeline/ml-1m/*
+/DataPipeline/data/*
+/Deep_Learning/*ckp*
+JPype1-1.4.0-cp310-cp310-win_amd64.whl
+/ML/data
+/Text Mining/config.py
+/Project 1/videos
+/CNN/vgg.h5
+/CNN/화면 캡처 2022-11-16 153307.jpg
+/CNN/dataset*
+/Topic Modelling/reviews.jpg
