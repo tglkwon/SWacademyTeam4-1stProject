@@ -1,11 +1,8 @@
 # local env file
 .env
 
-# article text data
-/articles/
+# no_use_files
+/no_use_files
 
-# training checkpoints
-/practice/training_checkpoints/
-
-# JetBrain .idea
-/.idea
+# datasets
+/datasets
