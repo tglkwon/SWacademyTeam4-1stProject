@@ -13,7 +13,7 @@ dom = BeautifulSoup(get(url).text, 'html.parser')
 # </div>
 dom.select('tr > td:nth-child(3)')
 dom.select('img[src]')
-zzzzzzzzzzzzzzzzzzzzzz
+
 ## google
 
 headers = {'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36'}
@@ -35,7 +35,7 @@ dom = BeautifulSoup(response.text, 'html.parser')
 
 ## naver
 url_naver = 'https://search.naver.com/search.naver'
-params_naver = {'where':'nexearch','query':'한가인'}
+params_naver = {'where':'nexearch', 'query':'한가인'}
 dom = BeautifulSoup(get(url_naver, params=params_naver, headers=headers).text, 'html.parser')
 
 # for _ in dom.select('.news_tit, .link_tit, .total_tit[href]'):
