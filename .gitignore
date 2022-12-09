@@ -21,3 +21,5 @@ JPype1-1.4.0-cp310-cp310-win_amd64.whl
 /CNN/dataset*
 /Topic Modelling/reviews.jpg
 /news/
+news_Crawl.db
+news_Crawl.db-journal
