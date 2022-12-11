@@ -23,3 +23,6 @@ JPype1-1.4.0-cp310-cp310-win_amd64.whl
 /news/
 news_Crawl.db
 news_Crawl.db-journal
+news_Crawl.db
+news_Crawl_home.db-journal
+
